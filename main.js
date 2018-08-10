@@ -36,7 +36,7 @@ let girl = newFunc('Let\'s be precise. Is she a woman or a girl?');
 console.log(girl);
 
 //Confirm age and girl 
-let agree = confirm(author + " Is Ms. Mystery a " + girl "? " + "Is she " + age + " years old?")
+let agree = confirm(author + " : Is Ms. Mystery a " + girl + "? " + "Is she " + age + " years old?")
 console.log(agree);
 // if false, call newFunc again twice and store responses in variables 
     if (agree === false) {
