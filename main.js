@@ -36,7 +36,7 @@ let girl = newFunc('Let\'s be precise. Is she a woman or a girl?');
 console.log(girl);
 
 //Confirm age and girl 
-let agree = confirm(author + "Please confirm whether Ms. Mystery is a " + girl + " and she is " + age + " years old?")
+let agree = confirm(author + " Is Ms. Mystery a " + girl "? " + "Is she " + age + " years old?")
 console.log(agree);
 // if false, call newFunc again twice and store responses in variables 
     if (agree === false) {
@@ -48,7 +48,7 @@ console.log(agree);
 let town = newFunc('Where, geographically, does Ms. Mystery live?');
 console.log(town); 
 // call alert function by passing it an argument that includes strings and variables 
-alert('Perfect choice, ' + author + '. Ms. Mystery is going to have lots of adventures in ' + town); 
+alert('Perfect choice, ' + author + '. Ms. Mystery is going to have lots of adventures in ' + town + "."); 
 
 //Create function newFunc2 which uses HTML method and property 
 function newFunc2(l, m) 
