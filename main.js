@@ -1,4 +1,6 @@
 // declare variable that holds an array with captcha questions
+// create an if statement that if the for loop is false, then we return. if true, then you can go on. 
+let captchaTrue;
 let captchaArray = ['Who is the President?', 'What is the abbreviation for District of Columbia', 'Please type \'cat\'?'];
 // define a function that declares a variable, then sets it to the array that holds the correct answers to the captcha questions
 function captchaFunction() {
@@ -8,73 +10,81 @@ function captchaFunction() {
         let result = prompt(captchaArray[i]);
         if(correctAnswer[i] !== result) {
             alert('Sorry Robot');
-            break; 
+            break ; 
         }
     }
     alert('Hello Human');
+    restJS();
 }
-// call the function
-captchaFunction();
 
-alert('You have the power to change destiny for our character, Ms. Mystery. Please answer the following questions with care.');
+function restJS() {
+    // call the function
+    let captchaTrue 
+    if (captchaTrue == true) {
+        return 
+    }
+    captchaFunction();
 
-// Function called newFunc that accepts parameters. Prompts x and returns y. 
-function newFunc(x) { 
-    return prompt(x);
-};
+    alert('You have the power to change destiny for our character, Ms. Mystery. Please answer the following questions with care.');
 
-//Invoke newFunc and return author
-let author = newFunc('What\'s your name?'); 
-console.log(author);
+    // Function called newFunc that accepts parameters. Prompts x and returns y. 
+    function newFunc(x) { 
+        return prompt(x);
+    };
 
-//Invoke newFunc and return age
-let age = newFunc('How old is Ms. Mystery? '); 
-console.log(age);
+    //Invoke newFunc and return author
+    let author = newFunc('What\'s your name?'); 
+    console.log(author);
 
-//Invoke newFunc and return girl 
-let girl = newFunc('Let\'s be precise. Is she a woman or a girl?'); 
-console.log(girl);
+    //Invoke newFunc and return age
+    let age = newFunc('How old is Ms. Mystery? '); 
+    console.log(age);
 
-//Confirm age and girl 
-let agree = confirm(author + " : Is Ms. Mystery a " + girl + "? " + "Is she " + age + " years old?")
-console.log(agree);
-// if false, call newFunc again twice and store responses in variables 
-    if (agree === false) {
-        age = newFunc('How old is Ms. Mystery? Please type the digits.'); 
-        girl = newFunc('Again, let\'s be precise. Is she a woman or a girl? Please type \'woman\' or \'girl\''); 
-    }; 
+    //Invoke newFunc and return girl 
+    let girl = newFunc('Let\'s be precise. Is she a woman or a girl?'); 
+    console.log(girl);
 
-//Invoke newFunc and return town
-let town = newFunc('Where, geographically, does Ms. Mystery live?');
-console.log(town); 
-// call alert function by passing it an argument that includes strings and variables 
-alert('Perfect choice, ' + author + '. Ms. Mystery is going to have lots of adventures in ' + town + "."); 
+    //Confirm age and girl 
+    let agree = confirm(author + " : Is Ms. Mystery a " + girl + "? " + "Is she " + age + " years old?")
+    console.log(agree);
+    // if false, call newFunc again twice and store responses in variables 
+        if (agree === false) {
+            age = newFunc('How old is Ms. Mystery? Please type the digits.'); 
+            girl = newFunc('Again, let\'s be precise. Is she a woman or a girl? Please type \'woman\' or \'girl\''); 
+        }; 
 
-//Create function newFunc2 which uses HTML method and property 
-function newFunc2(l, m) 
-{
-let elOne = document.getElementsByClassName(l)
-    for(i = 0; i < elOne.length; i++)
+    //Invoke newFunc and return town
+    let town = newFunc('Where, geographically, does Ms. Mystery live?');
+    console.log(town); 
+    // call alert function by passing it an argument that includes strings and variables 
+    alert('Perfect choice, ' + author + '. Ms. Mystery is going to have lots of adventures in ' + town + "."); 
+
+    //Create function newFunc2 which uses HTML method and property 
+    function newFunc2(l, m) 
     {
-        elOne[i].innerHTML = m; 
+    let elOne = document.getElementsByClassName(l)
+        for(i = 0; i < elOne.length; i++)
+        {
+            elOne[i].innerHTML = m; 
+        }; 
+    };
+
+    //Invoke newFunc2 and pass it arguments 
+    newFunc2('author', author); 
+    console.log(newFunc2); 
+
+    // Function called newFunc2. Gets element by id, using argument id1, and replaces it with a string. Sets element to equal parameter para1. 
+    function newFunc3(id1, para1)
+    {
+        let elTwo= document.getElementById(id1)
+        elTwo.innerHTML = para1; 
     }; 
-};
 
-//Invoke newFunc2 and pass it arguments 
-newFunc2('author', author); 
-console.log(newFunc2); 
-
-// Function called newFunc2. Gets element by id, using argument id1, and replaces it with a string. Sets element to equal parameter para1. 
-function newFunc3(id1, para1)
-{
-    let elTwo= document.getElementById(id1)
-    elTwo.innerHTML = para1; 
-}; 
-
-// Invoke newFunc2 three times by passing it arguments 
-newFunc3('age', age); 
-console.log(newFunc3); 
-newFunc3('girl', girl); 
-console.log(newFunc3);
-newFunc3('town', town);
-console.log(town);
+    // Invoke newFunc2 three times by passing it arguments 
+    newFunc3('age', age); 
+    console.log(newFunc3); 
+    newFunc3('girl', girl); 
+    console.log(newFunc3);
+    newFunc3('town', town);
+    console.log(town);
+}
