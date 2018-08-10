@@ -9,13 +9,10 @@ function captchaFunction() {
     for(let i = 0; i < captchaArray.length; i++) {
         let result = prompt(captchaArray[i]);
         let tF = (correctAnswer[i] == result);
-        if(!tF) {
+        if(tF == false) {
             alert('Sorry Robot');
-            break ; 
-        }
-        
-    }
-    if(!tF) { break; }
+            return ; 
+        } else 
     alert('Hello Human');
     restJS();
 }
