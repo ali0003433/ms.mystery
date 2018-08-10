@@ -3,24 +3,23 @@
 
 let captchaArray = ['Who is the President?', 'What is the abbreviation for District of Columbia', 'Please type \'cat\'?'];
 // define a function that declares a variable, then sets it to the array that holds the correct answers to the captcha questions
+let tf;
 function captchaFunction() {
     let correctAnswer = ['Donald Trump', 'DC', 'cat'];
     // create a for loop that runs while the variable is less than the length of the captchaArray, which houses the captcha questions. Then declare a variable to store the user's answers to the captcha questions. Set a condition that if the user's answer is not equal to the correct answer, invoke alert with a string. Otherwise, once the for loop is exited, invoke alert function with its string argument. 
-    for(let i = 0; i < captchaArray.length; i++) {
+    for(let i = 0; i < captchaArray.length; i++) 
+    {
         let result = prompt(captchaArray[i]);
-        let tF = (correctAnswer[i] == result);
-        if(tF == false) {
-            alert('Sorry Robot');
-            return ; 
-        } else 
-    alert('Hello Human');
-    restJS();
-}
+        tF = (correctAnswer[i] == result);
+        if(tF == false) 
+        {
+            alert('Sorry Robot');    
+        }  
 
-function restJS() {
-    // call the function
-   
     captchaFunction();
+    if(tF == false) {
+        break
+    }
 
     alert('You have the power to change destiny for our character, Ms. Mystery. Please answer the following questions with care.');
 
@@ -84,4 +83,3 @@ function restJS() {
     console.log(newFunc3);
     newFunc3('town', town);
     console.log(town);
-}
