@@ -17,12 +17,7 @@ function captchaFunction() {
             return ;    
         } else alert('Hello human'); 
     }
-    if (tF == false) {
-        break; 
-    }
 }
-
-
     captchaFunction()
     alert('You have the power to change destiny for our character, Ms. Mystery. Please answer the following questions with care.');
 
