@@ -13,18 +13,22 @@ function captchaFunction() {
         tF = (correctAnswer[i] == result);
         if(tF == false) 
         {
-            alert('Sorry Robot');    
-        }  
-
-    captchaFunction();
-    if(tF == false) {
-        break
+            alert('Sorry Robot')
+            return ;    
+        } else alert('Hello human'); 
     }
+    if (tF == false) {
+        break; 
+    }
+}
 
+
+    captchaFunction()
     alert('You have the power to change destiny for our character, Ms. Mystery. Please answer the following questions with care.');
 
     // Function called newFunc that accepts parameters. Prompts x and returns y. 
-    function newFunc(x) { 
+    function newFunc(x) 
+    { 
         return prompt(x);
     };
 
@@ -44,7 +48,8 @@ function captchaFunction() {
     let agree = confirm(author + " : Is Ms. Mystery a " + girl + "? " + "Is she " + age + " years old?")
     console.log(agree);
     // if false, call newFunc again twice and store responses in variables 
-        if (agree === false) {
+        if (agree === false) 
+        {
             age = newFunc('How old is Ms. Mystery? Please type the digits.'); 
             girl = newFunc('Again, let\'s be precise. Is she a woman or a girl? Please type \'woman\' or \'girl\''); 
         }; 
@@ -82,4 +87,4 @@ function captchaFunction() {
     newFunc3('girl', girl); 
     console.log(newFunc3);
     newFunc3('town', town);
-    console.log(town);
+    console.log(town); 
