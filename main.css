@@ -1,0 +1,18 @@
+
+p, h1, h5, h3, span {
+    font-family: Arial, 'Helvetica', sans-serif;
+}
+
+p, span {
+    font-size: 12px;
+}
+
+#age , #town, #girl, .author {
+    color: lightcoral;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+}
+
